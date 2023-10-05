@@ -8,6 +8,7 @@
     "README.md",
     "android",
     "index.js",
+    "react-native-plugin.podspec",
     "ios"
   ],
   "scripts": {
