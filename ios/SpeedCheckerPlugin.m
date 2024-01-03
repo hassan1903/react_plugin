@@ -79,7 +79,7 @@ RCT_EXPORT_METHOD(stopTest) {
 }
 
 - (void)startSpeedTest {
-    self.internetTest = [[InternetSpeedTest alloc] initWithClientID:0 userID:0 isBackground:NO delegate:self];
+    self.internetTest = [[InternetSpeedTest alloc] initWithLicenseKey:@"59dd8ef5a824efccf31af0c00e27bec166cfbfdfa33cd3286f42aa0339d9b392" delegate:self];
     [self.internetTest start:^(enum SpeedTestError error) {
         if (error != SpeedTestErrorOk) {
             [self sendErrorResult:error];
