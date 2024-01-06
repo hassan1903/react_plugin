@@ -20,7 +20,7 @@
     if (self) {
         self.locationManager = [CLLocationManager new];
         self.resultDict = [NSMutableDictionary new];
-        [self requestLocation];
+        // [self requestLocation];
     }
     return self;
 }
@@ -41,7 +41,8 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(startTest) {
     [self resetServer];
-    [self checkPermissionsAndStartTest];
+    // [self checkPermissionsAndStartTest];
+    [self startSpeedTest];
 }
 
 RCT_EXPORT_METHOD(stopTest) {
