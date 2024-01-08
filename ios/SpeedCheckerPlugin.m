@@ -21,7 +21,6 @@
     if (self) {
         self.locationManager = [CLLocationManager new];
         self.resultDict = [NSMutableDictionary new];
-        // [self requestLocation];
     }
     return self;
 }
@@ -39,6 +38,10 @@
 #pragma mark - Exports
 
 RCT_EXPORT_MODULE()
+
+RCT_EXPORT_METHOD(setLicenseKey:(NSString*)licenseKey) {
+    _licenseKey = licenseKey;
+}
 
 RCT_EXPORT_METHOD(startTest) {
     [self resetServer];
